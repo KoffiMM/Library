@@ -2,7 +2,7 @@ let cont = document.querySelector(".container");
 let formdata = document.querySelectorAll("input");
 document.getElementById("newBook").addEventListener("click", openForm);
 let submit = document.getElementById("submit");
-// .addEventListener("click", addBookToLibrary);
+
 let myLibrary = [];
 
 function Book(title, author, pages) {
@@ -35,9 +35,6 @@ function addBookToLibrary(title, author, pages) {
   let div4 = document.createElement("div");
   div4.className = "description";
 
-  // var p4 = document.createElement("p");
-  // // p4.textContent = str1;
-  // d.appendChild(p1);
   document.getElementById("test").appendChild(div);
   div.appendChild(div1);
   div1.appendChild(div2);
@@ -53,18 +50,11 @@ function addBookToLibrary(title, author, pages) {
   para2.textContent = str3;
   div4.appendChild(para2);
   cont.appendChild(div);
-
-  // document.querySelector("#test").innerHTML = str1;
-  // let template = myLibrary.map((user) => `${user}`).join("\n");
-  // document.querySelector(".description").innerHTML = (
 }
 let author = document.getElementById("author");
 let title = document.getElementById("title");
 let pages = document.getElementById("pages");
 submit.addEventListener("click", () => {
-  // author.value = "";
-  // title.value = "";
-  // pages.value = "";
   addBookToLibrary(title.value, author.value, pages.value);
 });
 
