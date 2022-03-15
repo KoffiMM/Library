@@ -13,54 +13,58 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="ui center aligned grid">
-      <div class="ui button" id="newBook" tabindex="0">Add a Book</div>
-      <div id="form-info" class="four wide column">
-        <h1 class="ui header">What are you reading today?</h1>
+    <div class="container">
+      <div class="ui center aligned grid">
+        <div class="ui button" id="newBook" tabindex="0">Add a Book</div>
+        <div id="test">
+          <h1>Hello</h1>
+        </div>
+        <div id="form-info" class="four wide column">
+          <h1 class="ui header">What are you reading today?</h1>
 
-        <form class="ui form">
-          <div class="field">
-            <label>Title</label>
+          <form class="ui form">
             <div class="field">
-              <input
-                id="title"
-                type="text"
-                name="title[title]"
-                placeholder="Title"
-                required
-              />
+              <label>Title</label>
+              <div class="field">
+                <input
+                  id="title"
+                  type="text"
+                  name="title[title]"
+                  placeholder="Title"
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label>Author</label>
             <div class="field">
-              <input
-                type="text"
-                id="author"
-                name="author[Author]"
-                placeholder="Last Name"
-                required
-              />
+              <label>Author</label>
+              <div class="field">
+                <input
+                  type="text"
+                  id="author"
+                  name="author[Author]"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label>Pages</label>
+            <div class="field">
+              <label>Pages</label>
 
-            <div class="field">
-              <input
-                type="text"
-                id="pages"
-                name="pages[pages]"
-                placeholder="Pages"
-                required
-              />
+              <div class="field">
+                <input
+                  type="text"
+                  id="pages"
+                  name="pages[pages]"
+                  placeholder="Pages"
+                  required
+                />
+              </div>
             </div>
-          </div>
-          <div class="ui button" id="submit" tabindex="0">Submit</div>
-        </form>
+            <div class="ui button" id="submit" tabindex="0">Submit</div>
+          </form>
+        </div>
       </div>
     </div>
-
     <script src="index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
