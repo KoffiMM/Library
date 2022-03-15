@@ -49,6 +49,25 @@ function addBookToLibrary(title, author, pages) {
   const para2 = document.createElement("p");
   para2.textContent = str3;
   div4.appendChild(para2);
+  let div5 = document.createElement("div");
+  div5.className = "ui red bottom attached button";
+  div5.innerHTML = "Remove";
+  div2.appendChild(div5);
+  div5.addEventListener("click", () => {
+    removeData();
+  });
+  let div6 = document.createElement("div");
+  div6.className = "ui blue bottom attached button";
+  div2.appendChild(div6);
+  div6.innerHTML = "Read";
+  div6.addEventListener("click", () => {
+    if (div6.innerHTML === "Read") {
+      div6.innerHTML = "Not Read";
+    } else {
+      div6.innerHTML = "Read";
+    }
+  });
+
   cont.appendChild(div);
 }
 let author = document.getElementById("author");
@@ -58,6 +77,9 @@ submit.addEventListener("click", () => {
   addBookToLibrary(title.value, author.value, pages.value);
 });
 
+function removeData() {
+  cont.removeChild(cont.lastElementChild);
+}
 function openForm() {
   document.getElementById("form-info").style.display = "block";
 }
